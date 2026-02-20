@@ -111,3 +111,85 @@ if (canvas) {
     createParticles();
     draw();
 }
+
+
+// =============================================
+// Contact Form - Web3Forms Integration
+// =============================================
+const contactForm = document.getElementById('portfolioContact');
+const submitBtn = document.getElementById('submitBtn');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // Button loading state
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Success state
+                submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message Sent!';
+                submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                contactForm.reset();
+
+                // Show success message
+                showFormMessage('Message sent! I will get back to you soon.', 'success');
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 4000);
+            } else {
+                throw new Error(data.message || 'Something went wrong');
+            }
+        } catch (error) {
+            // Error state
+            submitBtn.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Failed - Try Again';
+            submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+            showFormMessage('Oops! Something went wrong. Please try again.', 'error');
+
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+            }, 4000);
+        }
+    });
+}
+
+function showFormMessage(message, type) {
+    // Remove any existing message
+    const existing = document.getElementById('formMessage');
+    if (existing) existing.remove();
+
+    const msg = document.createElement('div');
+    msg.id = 'formMessage';
+    msg.textContent = message;
+    msg.style.cssText = `
+        padding: 12px 18px;
+        border-radius: 8px;
+        margin-top: 12px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        background: ${type === 'success' ? 'rgba(16,185,129,0.15)' : 'rgba(239,68,68,0.15)'};
+        color: ${type === 'success' ? '#10b981' : '#ef4444'};
+        border: 1px solid ${type === 'success' ? 'rgba(16,185,129,0.3)' : 'rgba(239,68,68,0.3)'};
+    `;
+
+    submitBtn.insertAdjacentElement('afterend', msg);
+
+    setTimeout(() => msg.remove(), 5000);
+}
