@@ -843,3 +843,32 @@ textarea.form-input {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+
+/* Instagram Stats Styling */
+.brand-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  margin-top: 15px;
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-purple-light);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--clr-muted);
+  text-transform: lowercase;
+}
