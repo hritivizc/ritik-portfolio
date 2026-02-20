@@ -443,18 +443,21 @@
                 </div>
                 
                 <div class="contact-form" data-aos="fade-left">
-                    <form id="portfolioContact">
+            <form id="portfolioContact" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="27640b73-f458-430e-8a02-7aece2d46d3d">
+                <input type="hidden" name="subject" value="New Portfolio Enquiry - Ritik Sharma">
+                <input type="hidden" name="from_name" value="Portfolio Website - hritivizc.github.io">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-input" placeholder="Ritik Sharma" required>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Ritik Sharma" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-input" placeholder="hello@hritiviz.com" required>
+                                                    <input type="email" id="email" name="email" class="form-input" placeholder="hello@hritiviz.com" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Tell me about your project</label>
-                            <textarea id="message" class="form-input" placeholder="What can we build together?" required></textarea>
+                                                    <textarea id="message" name="message" class="form-input" placeholder="What can we build together?" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
                             Send Message <i class="fa-solid fa-paper-plane"></i>
