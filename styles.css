@@ -813,3 +813,33 @@ textarea.form-input {
   .hero-chips { gap: 6px; }
   .chip { font-size: 0.75rem; padding: 5px 12px; }
 }
+
+
+/* Instagram Stats Styling */
+.ig-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--clr-border);
+}
+
+.ig-stat-item {
+    text-align: center;
+}
+
+.ig-stat-value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--clr-white);
+    line-height: 1;
+}
+
+.ig-stat-label {
+    font-size: 0.75rem;
+    color: var(--clr-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
