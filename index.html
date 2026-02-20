@@ -1,192 +1,312 @@
 <!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritik Sharma | Marketing Specialist & Digital Storyteller</title>
-    <meta name=\"description\" content=\"Ritik Sharma - IT Head at Path Career Institute, Founder of Hritiviz Digital Agency. Performance-focused digital marketing for education, healthcare, and automotive brands.\">
+    <meta name="description" content="Ritik Sharma - IT Head at Path Career Institute, Founder of Hritiviz Digital Agency. Performance-focused digital marketing for education, healthcare, and automotive brands.">
     
     <!-- CSS LIBRARIES -->
-    <link rel=\"stylesheet\" href=\"https://unpkg.com/aos@2.3.4/dist/aos.css\">
-    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css\">
-    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap\" rel=\"stylesheet\">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     
     <!-- LOCAL STYLES -->
-    <link rel=\"stylesheet\" href=\"styles.css\">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- NAVBAR -->
-    <nav class=\"navbar\" id=\"navbar\">
-        <div class=\"nav-container\">
-            <a href=\"#hero\" class=\"nav-logo\">
-                <span class=\"logo-accent\">R</span>S<span class=\"nav-dot\">.</span>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-accent">R</span>S<span class="nav-dot">.</span>
             </a>
             
-            <ul class=\"nav-links\" id=\"navLinks\">
-                <li><a href=\"#about\">About</a></li>
-                <li><a href=\"#experience\">Brands</a></li>
-                <li><a href=\"#skills\">Skills</a></li>
-                <li><a href=\"#work\">Work</a></li>
-                <li><a href=\"#contact\" class=\"nav-cta\">Let's Talk</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Brands</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
             </ul>
-
-            <button class=\"hamburger\" id=\"hamburger\" aria-label=\"Toggle menu\">
-                <span></span><span></span><span></span>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
             </button>
         </div>
     </nav>
 
     <!-- HERO -->
-    <section class=\"hero\" id=\"hero\">
-        <canvas id=\"particleCanvas\"></canvas>
-        <div class=\"hero-content\">
-            <p class=\"hero-eyebrow\">Sikar, Rajasthan</p>
-            <h1 class=\"hero-headline\">
-                Marketing Specialist<br> & <span class=\"gradient-text\">Digital Storyteller</span>
+    <section class="hero" id="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <p class="hero-eyebrow" data-aos="fade-up">Sikar, Rajasthan</p>
+            <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="100">
+                Marketing Specialist<br>& <span class="gradient-text">Digital Storyteller</span>
             </h1>
-            <p class=\"hero-sub\">
+            <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
                 IT Head at Path Career Institute and Founder of Hritiviz Digital Agency, helping education, healthcare, and automotive brands grow with performance-focused digital marketing.
             </p>
             
-            <div class=\"hero-chips\">
-                <span class=\"chip\">Social Media Marketing</span>
-                <span class=\"chip\">Meta Ads</span>
-                <span class=\"chip\">Video Editing</span>
-                <span class=\"chip\">Cinematography</span>
-                <span class=\"chip\">Web & Automation</span>
+            <div class="hero-chips" data-aos="fade-up" data-aos-delay="300">
+                <span class="chip">Social Media Marketing</span>
+                <span class="chip">Meta Ads</span>
+                <span class="chip">Video Editing</span>
+                <span class="chip">Cinematography</span>
+                <span class="chip">Web & Automation</span>
             </div>
-
-            <div class=\"hero-btns\">
-                <a href=\"./cv/ritik-sharma-cv.pdf\" class=\"btn btn-primary float-anim download\">
-                    <i class=\"fa-solid fa-download\"></i> Download CV
+            
+            <div class="hero-btns" data-aos="fade-up" data-aos-delay="400">
+                <a href="./cv/ritik-sharma-cv.pdf" class="btn btn-primary" download>
+                    <i class="fa-solid fa-download"></i> Download CV
                 </a>
-                <a href=\"#work\" class=\"btn btn-outline\">
-                    <i class=\"fa-solid fa-arrow-down\"></i> View Work
-                </a>
+                <a href="#work" class="btn btn-outline">View Work</a>
             </div>
         </div>
-
-        <div class=\"scroll-hint\"><span></span></div>
     </section>
+
+    <!-- STATS -->
+    <div class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-num" data-target="6">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="45">0</div>
+                    <div class="stat-label">Brands Managed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="150">0</div>
+                    <div class="stat-label">Videos Produced</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="3000">0</div>
+                    <div class="stat-label">Leads Generated</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ABOUT -->
-    <section class=\"section about\" id=\"about\">
-        <div class=\"container\">
-            <div class=\"section-tag\" data-aos=\"fade-up\">About Me</div>
-            <h2 class=\"section-title\" data-aos=\"fade-up\" data-aos-delay=\"100\">The Person Behind the Strategy</h2>
-            
-            <div class=\"about-grid\">
-                <div class=\"about-text\" data-aos=\"fade-right\" data-aos-delay=\"150\">
-                    <p>I'm <strong>Ritik Sharma</strong>, a digital marketer and media specialist with <strong>6 years of hands-on experience</strong> building brands from the ground up. Based in Sikar, Rajasthan, I currently serve as <strong>IT Head & Digital Marketing Lead at Path Career Institute</strong> and run my own consultancy, <strong>Hritiviz Digital Agency</strong>.</p>
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">The Person Behind the Strategy</h2>
+                    <p class="about-p">I'm <span class="highlight">Ritik Sharma</span>, a digital marketer and media specialist with 6 years of hands-on experience building brands from the ground up. Based in Sikar, Rajasthan, I currently serve as IT Head & Digital Marketing Lead at Path Career Institute and run my own consultancy, Hritiviz Digital Agency.</p>
+                    <p class="about-p">I manage 45+ brand accounts simultaneously, running high-converting Meta Ad campaigns that consistently pull a 30% interested audience rate. From scripting and cinematography to ad optimisation and automation, I handle the full digital lifecycle.</p>
                     
-                    <p>I manage <strong>45+ brand accounts simultaneously</strong>, running high-converting Meta Ad campaigns that consistently pull a <strong>30% interested audience rate</strong>. From scripting and cinematography to ad optimisation and automation, I handle the full digital lifecycle.</p>
-
-                    <div class=\"about-roles\">
-                        <div class=\"role-badge\">
-                            <i class=\"fa-solid fa-building\"></i>
-                            <div><strong>IT Head & DM Lead</strong><span>Path Career Institute</span></div>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="info-content">
+                                <h4>IT Head & DM Lead</h4>
+                                <p>Path Career Institute (Sikar)</p>
+                            </div>
                         </div>
-                        <div class=\"role-badge\">
-                            <i class=\"fa-solid fa-rocket\"></i>
-                            <div><strong>Founder</strong><span>Hritiviz Digital Agency</span></div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <div class="info-content">
+                                <h4>Founder</h4>
+                                <p>Hritiviz Digital Agency</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div class="exp-title">Experience Timeline</div>
+                        </div>
+                        <div class="exp-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-role">IT Head & DM Lead</div>
+                                <div class="timeline-company">Path Career Institute</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-role">Founder & Strategist</div>
+                                <div class="timeline-company">Hritiviz Digital Agency</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-role">Marketing Head</div>
+                                <div class="timeline-company">Arogyam Yoga Kendra</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-role">Campaign Manager</div>
+                                <div class="timeline-company">MDCL Group</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-blob"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class=\"timeline\" data-aos=\"fade-left\" data-aos-delay=\"200\">
-                    <h3 class=\"timeline-title\">Experience Timeline</h3>
-                    <div class=\"timeline-items\">
-                        <div class=\"tl-item\">
-                            <div class=\"tl-dot\"></div>
-                            <div class=\"tl-content\">
-                                <strong>Path Career Institute</strong>
-                                <span>IT Head & Digital Marketing Lead</span>
-                            </div>
-                        </div>
-                        <div class=\"tl-item\">
-                            <div class=\"tl-dot\"></div>
-                            <div class=\"tl-content\">
-                                <strong>Hritiviz Digital Agency</strong>
-                                <span>Founder & Lead Strategist</span>
-                            </div>
-                        </div>
-                        <div class=\"tl-item\">
-                            <div class=\"tl-dot\"></div>
-                            <div class=\"tl-content\">
-                                <strong>Arogyam Prakritik Yog Chikitsa Kendra</strong>
-                                <span>Digital Marketing Head</span>
-                            </div>
-                        </div>
-                        <div class=\"tl-item\">
-                            <div class=\"tl-dot\"></div>
-                            <div class=\"tl-content\">
-                                <strong>MDCL Group of Institutes</strong>
-                                <span>Social Media & Campaign Manager</span>
-                            </div>
-                        </div>
+    <!-- BRANDS SCROLL -->
+    <div class="brands-slider">
+        <div class="brands-track">
+            <span class="brand-name">PATH CAREER</span>
+            <span class="brand-name">LAXMI CAR DECOR</span>
+            <span class="brand-name">SMT AUTOMALL</span>
+            <span class="brand-name">AROGYAM YOGA</span>
+            <span class="brand-name">DEEPAK MOBILE</span>
+            <span class="brand-name">MDCL GROUP</span>
+            <!-- Duplicated for loop -->
+            <span class="brand-name">PATH CAREER</span>
+            <span class="brand-name">LAXMI CAR DECOR</span>
+            <span class="brand-name">SMT AUTOMALL</span>
+            <span class="brand-name">AROGYAM YOGA</span>
+            <span class="brand-name">DEEPAK MOBILE</span>
+            <span class="brand-name">MDCL GROUP</span>
+        </div>
+    </div>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <div class="container">
+            <span class="section-tag">Capabilities</span>
+            <h2 class="section-title">My Marketing Toolkit</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="skill-cat-title"><i class="fa-solid fa-chart-line"></i> Performance</div>
+                    <div class="skill-items">
+                        <span class="skill-tag">Meta Ads (FB/IG)</span>
+                        <span class="skill-tag">Lead Generation</span>
+                        <span class="skill-tag">Campaign Strategy</span>
+                        <span class="skill-tag">Audience Research</span>
+                        <span class="skill-tag">Budget Scaling</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-cat-title"><i class="fa-solid fa-clapperboard"></i> Content</div>
+                    <div class="skill-items">
+                        <span class="skill-tag">Video Editing</span>
+                        <span class="skill-tag">Cinematography</span>
+                        <span class="skill-tag">Scriptwriting</span>
+                        <span class="skill-tag">Thumbnail Design</span>
+                        <span class="skill-tag">Social Media Mgmt</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-cat-title"><i class="fa-solid fa-code"></i> Tech & Automation</div>
+                    <div class="skill-items">
+                        <span class="skill-tag">WordPress / Web Dev</span>
+                        <span class="skill-tag">n8n Automation</span>
+                        <span class="skill-tag">AI Integration</span>
+                        <span class="skill-tag">SEO Fundamentals</span>
+                        <span class="skill-tag">Python & JS</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- STATS STRIP -->
-    <section class=\"stats-strip\" id=\"stats\">
-        <div class=\"container stats-grid\">
-            <div class=\"stat-item\" data-aos=\"zoom-in\">
-                <span class=\"stat-num\" data-target=\"6\">0</span><span class=\"stat-plus\">+</span>
-                <p>Years in Digital Marketing</p>
-            </div>
-            <div class=\"stat-item\" data-aos=\"zoom-in\" data-aos-delay=\"100\">
-                <span class=\"stat-num\" data-target=\"50\">0</span><span class=\"stat-plus\">+</span>
-                <p>Accounts Managed</p>
-            </div>
-            <div class=\"stat-item\" data-aos=\"zoom-in\" data-aos-delay=\"200\">
-                <span class=\"stat-num\" data-target=\"500\">0</span><span class=\"stat-plus\">+</span>
-                <p>Videos Produced Monthly</p>
-            </div>
-            <div class=\"stat-item\" data-aos=\"zoom-in\" data-aos-delay=\"300\">
-                <span class=\"stat-num\" data-target=\"5000\">0</span><span class=\"stat-plus\">+</span>
-                <p>Leads/Month Peak</p>
+    <!-- WORK (PLACEHOLDERS) -->
+    <section class="section" id="work">
+        <div class="container">
+            <span class="section-tag">Portfolio</span>
+            <h2 class="section-title">Selected Projects</h2>
+            
+            <div class="work-grid">
+                <div class="work-card" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Project" class="work-img">
+                    <div class="work-overlay">
+                        <span class="work-cat">Education Marketing</span>
+                        <h3 class="work-title">Path Career Institute Expansion</h3>
+                        <p class="work-desc">Scaled lead generation by 400% using targeted Meta Ads and automated follow-up systems.</p>
+                        <a href="#" class="work-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="work-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Project" class="work-img">
+                    <div class="work-overlay">
+                        <span class="work-cat">Automotive Brands</span>
+                        <h3 class="work-title">Sikar Car Accessories Campaign</h3>
+                        <p class="work-desc">Managed social presence and ads for multiple premium automotive service providers.</p>
+                        <a href="#" class="work-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION (Minimal for now) -->
-    <section class=\"section contact\" id=\"contact\">
-        <div class=\"container\">
-            <div class=\"section-tag\">Get In Touch</div>
-            <h2 class=\"section-title\">Let's Create Something Great</h2>
-            <div class=\"contact-grid\">
-                <div class=\"contact-info\">
-                    <p>hritiviz@gmail.com</p>
-                    <p>+91 7073123656</p>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-tag">Contact</span>
+                    <h3 class="section-title">Let's Create Something Great</h3>
+                    <p>Ready to scale your brand? Let's discuss your next project.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p>hritiviz@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="method-content">
+                                <h4>Call / WhatsApp</h4>
+                                <p>+91 7073123656</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <form class=\"contact-form\" id=\"contactForm\">
-                   <div class=\"form-group\">
-                       <input type=\"text\" id=\"name\" placeholder=\"Your Name\" required>
-                   </div>
-                   <div class=\"form-group\">
-                       <input type=\"email\" id=\"email\" placeholder=\"Email Address\" required>
-                   </div>
-                   <div class=\"form-group\">
-                       <textarea id=\"message\" rows=\"5\" placeholder=\"Tell me about your project\" required></textarea>
-                   </div>
-                   <button type=\"submit\" class=\"btn btn-primary\" id=\"submitBtn\">Send Message</button>
-                </form>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="portfolioContact">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="Ritik Sharma" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-input" placeholder="hello@hritiviz.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell me about your project</label>
+                            <textarea id="message" class="form-input" placeholder="What can we build together?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class=\"footer\">
-        <div class=\"container\">
-            <p>&copy; <span id=\"footerYear\"></span> Ritik Sharma. Crafted with Sikar, Rajasthan.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">RS<span class="nav-dot">.</span></div>
+            <div class="social-links">
+                <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p class="copyright">© <span id="footerYear"></span> Ritik Sharma. Crafted with Sikar, Rajasthan.</p>
         </div>
     </footer>
 
     <!-- SCRIPTS -->
-    <script src=\"https://unpkg.com/aos@2.3.4/dist/aos.js\"></script>
-    <script src=\"script.js\"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
