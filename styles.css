@@ -272,7 +272,7 @@ a {
 }
 
 /* MAIN CONTENT */
-.main {
+.main, .main-content {
     margin-left: var(--sidebar-w);
     flex: 1;
     min-height: 100vh;
@@ -309,7 +309,7 @@ a {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero-headline {
@@ -688,7 +688,7 @@ a {
     font-size: 3.5rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     color: #fff;
 }
@@ -1023,7 +1023,7 @@ a {
 @media (max-width: 900px) {
     .sidebar { display: none; }
     .mobile-topbar { display: flex; }
-    .main { margin-left: 0; padding-top: 56px; }
+    .main, .main-content { margin-left: 0; padding-top: 56px; }
     
     .hero { min-height: auto; padding: 60px 24px 40px; }
     .hero-aside { display: none; }
@@ -1068,7 +1068,7 @@ a {
 /* Hero line clip reveal */
 .hero-line {
     display: block;
-    overflow: hidden;
+    overflow: visible;
     line-height: 1.12;
 }
 
@@ -1328,7 +1328,7 @@ body:hover #cursorRing {
  background: #fff;
  border-radius: 50%;
  position: relative;
- overflow: hidden;
+ overflow: visible;
 }
 .pupil {
  width: 10px;
@@ -1473,4 +1473,41 @@ body:hover #cursorRing {
     width: 180px;
   }
   .hero-inner { flex-direction: column; }
+}
+
+
+/* === DOODLE MAN + LAYOUT FIXES === */
+/* Fix: hero text hidden, face cut off */
+.hero {
+  overflow: visible !important;
+  padding-top: 80px;
+}
+.main-content {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  min-height: 100vh;
+}
+.hero-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 40px !important;
+  flex-wrap: nowrap !important;
+}
+.hero-text {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+.doodle-man-container {
+  position: relative !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 240px !important;
+  flex-shrink: 0 !important;
+  align-self: flex-end;
+}
+@media (max-width: 900px) {
+  .main-content { margin-left: 0; padding-top: 56px; }
+  .hero-inner { flex-direction: column !important; align-items: center !important; }
+  .doodle-man-container { width: 180px !important; }
 }
