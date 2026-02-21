@@ -1,5 +1,5 @@
-/* RITIK SHARMA PORTFOLIO v2.1 (FINAL)
-   Modified to restore doodle, add animations, and more business details
+/* RITIK SHARMA PORTFOLIO v2.2 (FINAL)
+   Modified to restore doodle, add animations, skills bars, and work characters
 ------------------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Inter:wght@300;400;500;600&family=Caveat&display=swap');
 
@@ -146,6 +146,7 @@ body {
 
 .sidebar-nav ul { list-style: none; }
 .sidebar-nav li { margin-bottom: 12px; }
+
 .sidebar-nav a {
   text-decoration: none;
   color: var(--text-dark);
@@ -210,6 +211,7 @@ section { padding: 100px 80px; }
 }
 
 .hero-headline span.accent-word { font-style: italic; font-weight: 300; }
+
 .hero-headline span.highlight {
   background: var(--accent);
   color: #fff;
@@ -223,8 +225,6 @@ section { padding: 100px 80px; }
   font-family: var(--font-display);
   font-size: 20px;
 }
-
-.hero-tags span { display: block; }
 
 /* DOODLE MAN */
 .doodle-container {
@@ -248,6 +248,7 @@ section { padding: 100px 80px; }
 }
 
 .stat-item { flex: 1; }
+
 .stat-num {
   display: block;
   font-family: var(--font-display);
@@ -264,7 +265,7 @@ section { padding: 100px 80px; }
   letter-spacing: 0.05em;
 }
 
-/* ABOUT SECTION */
+/* SECTIONS COMMON */
 .section-tag {
   font-size: 11px;
   text-transform: uppercase;
@@ -282,6 +283,7 @@ section { padding: 100px 80px; }
   margin-bottom: 60px;
 }
 
+/* ABOUT SECTION */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -372,12 +374,6 @@ section { padding: 100px 80px; }
   margin-bottom: 15px;
 }
 
-.tree-content p {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-bottom: 20px;
-}
-
 .tree-img {
   width: 100%;
   border-radius: 12px;
@@ -385,7 +381,68 @@ section { padding: 100px 80px; }
   object-fit: cover;
   background: #eee;
   border: 1px solid var(--border);
+  margin-top: 15px;
 }
+
+/* SKILLS SECTION */
+.skills-container { margin-top: 60px; }
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.skill-category h4 {
+    font-family: var(--font-display);
+    margin-bottom: 24px;
+    font-size: 20px;
+    color: var(--accent);
+}
+.skill-item { margin-bottom: 20px; }
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.skill-bar {
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.skill-progress {
+    height: 100%;
+    background: var(--accent);
+    width: 0;
+}
+
+/* WORK CARDS & CHARACTERS */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+.work-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: 40px;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.work-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); }
+.work-character {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 60px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+.work-card h3 { font-family: var(--font-display); font-size: 24px; margin-bottom: 15px; padding-right: 60px; }
+.work-card p { color: var(--text-muted); margin-bottom: 25px; }
 
 /* CONTACT FORM SECTION */
 .contact-grid {
