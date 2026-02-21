@@ -38,6 +38,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+     background: var(--bg);
 }
 
 body {
@@ -321,6 +322,68 @@ a {
     margin-bottom: 40px;
     letter-spacing: -0.02em;
     max-width: 860px;
+}
+
+.hero-greeting {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.hero-tags span {
+  font-size: 0.78rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+.hero-tags span:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  transition: var(--transition);
+}
+.btn-secondary:hover {
+  border-color: var(--text-dark);
+  background: var(--text-dark);
+  color: #fff;
+}
+.accent-word {
+  color: var(--accent);
+  font-style: italic;
+}
+.highlight {
+  color: var(--text-dark);
+  font-style: italic;
+  position: relative;
+}
+.hero-cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 /* Side annotation */
