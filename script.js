@@ -1,4 +1,22 @@
+// =============================================
+// PAGE LOADER - Dismiss on window load
+// =============================================
+const pageLoader = document.getElementById('pageLoader');
+if (pageLoader) {
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            pageLoader.style.transition = 'opacity 0.6s ease';
+            pageLoader.style.opacity = '0';
+            setTimeout(() => {
+                pageLoader.style.display = 'none';
+            }, 650);
+        }, 600);
+    });
+}
+
+// =============================================
 // AOS Init
+// =============================================
 AOS.init({
     duration: 700,
     easing: 'ease-out-cubic',
@@ -6,36 +24,28 @@ AOS.init({
     offset: 80,
 });
 
-// Sticky Navbar
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// Mobile Menu
+// =============================================
+// Mobile Hamburger Menu
+// =============================================
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navLinks.classList.toggle('active');
-});
-
-// Close menu on link click
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('open');
+const sidebar = document.getElementById('sidebar');
+if (hamburger && sidebar) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        sidebar.classList.toggle('open');
     });
-});
+    // Close sidebar when nav link clicked
+    sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            hamburger.classList.remove('open');
+        });
+    });
+}
 
-// Footer Year
-document.getElementById('footerYear').textContent = new Date().getFullYear();
-
+// =============================================
 // Stat Counters
+// =============================================
 const statNums = document.querySelectorAll('.stat-num');
 const animateCounter = (el) => {
     const target = parseInt(el.dataset.target, 10);
@@ -49,7 +59,6 @@ const animateCounter = (el) => {
     };
     requestAnimationFrame(update);
 };
-
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -60,136 +69,107 @@ const statsObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 statNums.forEach(el => statsObserver.observe(el));
 
-// Particle Canvas
-const canvas = document.getElementById('particleCanvas');
-if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    let animId;
-
-    function resize() {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-    }
-
-    function createParticles() {
-        particles = [];
-        const count = Math.floor((canvas.width * canvas.height) / 15000);
-        for (let i = 0; i < count; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                r: Math.random() * 1.5 + 0.5,
-                dx: (Math.random() - 0.5) * 0.4,
-                dy: (Math.random() - 0.5) * 0.4,
-                alpha: Math.random() * 0.5 + 0.2,
-            });
+// =============================================
+// Active Sidebar Nav on Scroll
+// =============================================
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.sidebar-nav a');
+const onScroll = () => {
+    let current = '';
+    sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) {
+            current = sec.id;
         }
-    }
-
-    function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => {
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(192, 132, 252, ${p.alpha})`;
-            ctx.fill();
-            p.x += p.dx;
-            p.y += p.dy;
-            if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-            if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
-        });
-        animId = requestAnimationFrame(draw);
-    }
-
-    window.addEventListener('resize', () => {
-        resize();
-        createParticles();
     });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+};
+window.addEventListener('scroll', onScroll, { passive: true });
 
-    resize();
-    createParticles();
-    draw();
+// =============================================
+// Custom Cursor
+// =============================================
+const cursor = document.getElementById('cursor');
+const cursorRing = document.getElementById('cursorRing');
+if (cursor && cursorRing) {
+    let cx = 0, cy = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => {
+        cx = e.clientX;
+        cy = e.clientY;
+        cursor.style.left = cx + 'px';
+        cursor.style.top = cy + 'px';
+    });
+    const animateRing = () => {
+        rx += (cx - rx) * 0.12;
+        ry += (cy - ry) * 0.12;
+        cursorRing.style.left = rx + 'px';
+        cursorRing.style.top = ry + 'px';
+        requestAnimationFrame(animateRing);
+    };
+    animateRing();
+    document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursorRing.style.width = '54px';
+            cursorRing.style.height = '54px';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursorRing.style.width = '36px';
+            cursorRing.style.height = '36px';
+        });
+    });
 }
-
 
 // =============================================
 // Contact Form - Web3Forms Integration
 // =============================================
-const contactForm = document.getElementById('portfolioContact');
-const submitBtn = document.getElementById('submitBtn');
-
+const contactForm = document.getElementById('contactForm');
+const submitBtn = contactForm ? contactForm.querySelector('button[type="submit"], .btn-submit') : null;
 if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-
-        // Button loading state
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-        submitBtn.disabled = true;
-
+        const btn = submitBtn || contactForm.querySelector('button');
+        const originalText = btn ? btn.innerHTML : '';
+        if (btn) {
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+        }
         const formData = new FormData(contactForm);
-
         try {
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 body: formData
             });
-
             const data = await response.json();
-
             if (data.success) {
-                // Success state
-                submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message Sent!';
-                submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message Sent!';
+                    btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                }
                 contactForm.reset();
-
-                // Show success message
-                showFormMessage('Message sent! I will get back to you soon.', 'success');
-
                 setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.background = '';
-                    submitBtn.disabled = false;
+                    if (btn) {
+                        btn.innerHTML = originalText;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }
                 }, 4000);
             } else {
                 throw new Error(data.message || 'Something went wrong');
             }
         } catch (error) {
-            // Error state
-            submitBtn.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Failed - Try Again';
-            submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
-            showFormMessage('Oops! Something went wrong. Please try again.', 'error');
-
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = '';
-                submitBtn.disabled = false;
-            }, 4000);
+            if (btn) {
+                btn.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Failed - Try Again';
+                btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 4000);
+            }
         }
     });
-}
-
-function showFormMessage(message, type) {
-    // Remove any existing message
-    const existing = document.getElementById('formMessage');
-    if (existing) existing.remove();
-
-    const msg = document.createElement('div');
-    msg.id = 'formMessage';
-    msg.textContent = message;
-    msg.style.cssText = `
-        padding: 12px 18px;
-        border-radius: 8px;
-        margin-top: 12px;
-        font-size: 0.9rem;
-        font-weight: 500;
-        background: ${type === 'success' ? 'rgba(16,185,129,0.15)' : 'rgba(239,68,68,0.15)'};
-        color: ${type === 'success' ? '#10b981' : '#ef4444'};
-        border: 1px solid ${type === 'success' ? 'rgba(16,185,129,0.3)' : 'rgba(239,68,68,0.3)'};
-    `;
-
-    submitBtn.insertAdjacentElement('afterend', msg);
-
-    setTimeout(() => msg.remove(), 5000);
 }
