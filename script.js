@@ -173,3 +173,21 @@ if (contactForm) {
         }
     });
 }
+
+
+// ============================================
+// SKILL BAR ANIMATION - Intersection Observer
+// ============================================
+const skillCards = document.querySelectorAll('.skill-card');
+if (skillCards.length > 0) {
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                skillObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    skillCards.forEach(card => skillObserver.observe(card));
+}
