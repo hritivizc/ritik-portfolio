@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritik Sharma | Marketing Specialist & Digital Storyteller</title>
-                    <link rel="stylesheet" href="styles.css?v=58">
+    <link rel="stylesheet" href="styles.css?v=59">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- NAVIGATION -->
@@ -31,14 +32,16 @@
                 <a href="https://linkedin.com/in/hritiviz-sharma-655376392" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
-                    <div class="sketch-doodle doodle-1"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            <div class="sketch-doodle doodle-2"><i class="fa-solid fa-pen-nib"></i></div>
-            <div class="work-character char-1"><i class="fa-solid fa-briefcase"></i></div>
-            <div class="work-character char-2"><i class="fa-solid fa-rocket"></i></div>
+        
+        <div class="sketch-doodle doodle-1"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="sketch-doodle doodle-2"><i class="fa-solid fa-pen-nib"></i></div>
+        <div class="work-character char-1"><i class="fa-solid fa-briefcase"></i></div>
+        <div class="work-character char-2"><i class="fa-solid fa-rocket"></i></div>
+        
         <div class="hero-illustration">
             <div class="profile-photo-wrapper">
                 <div class="profile-photo-ring">
-                                        <img src="https://lh3.googleusercontent.com/d/1wd54jydDmHqd15ko4MxmVpgF0i8wW4MF" alt="Ritik Sharma" class="profile-photo" onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Ritik+Sharma&size=400&background=000000&color=FFD700&bold=true&font-size=0.4';">
+                    <img src="https://lh3.googleusercontent.com/d/1wd54jyddMhqd15ko4MxmVpgf0i8wW4MF" alt="Ritik Sharma" class="profile-photo" onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Ritik+Sharma&size=400&background=000000&color=FFD700&bold=true&font-size=0.4';">
                 </div>
                 <div class="opentowork-badge">#OPENTOWORK</div>
             </div>
@@ -58,14 +61,14 @@
                         <h3>My Curriculum Vitae</h3>
                         <p>Click to view or download my latest CV.</p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1ip4oRqd0_Ua8SGCKhQeyKzY6zvozV2Zv/view?usp=sharing" class="cv-download" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> View CV</a>
+                    <a href="https://drive.google.com/file/d/1ip4oRqd0_Ua8SGCKhQeyKzY6zvozV2Zv/view?usp=sharing" target="_blank" class="cv-btn">View CV</a>
                 </div>
-            </div>
-            <div class="contact-text">
-                <p><strong>Key Achievements:</strong><br>
-                • Scaled Arogyam's Instagram from 300 to 3,000 followers (900% growth)<br>
-                • Built Laxmi Car Decor's presence from scratch driving walk-in traffic<br>
-                • Generated 400-500 monthly admission leads for Path Career Institute</p>
+                <div class="achievements-mini">
+                    <p><strong>Key Achievements:</strong><br>
+                    • Scaled Arogyam's Instagram from 300 to 3,000 followers (900% growth)<br>
+                    • Built Laxmi Car Decor's presence from scratch driving walk-in traffic<br>
+                    • Generated 400-500 monthly admission leads for Path Career Institute</p>
+                </div>
             </div>
         </div>
     </section>
@@ -79,25 +82,25 @@
                 <i class="fa-solid fa-bullhorn"></i>
                 <h3>Meta Ads Manager</h3>
                 <p>Setup, Audience Targeting, Budget Optimization, A/B Testing</p>
-                                <div class="skill-bar"><div class="skill-bar-fill" style="--skill-width:92%"></div></div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="--skill-width: 95%"></div></div>
             </div>
             <div class="skill-card">
                 <i class="fa-solid fa-video"></i>
                 <h3>Video Production</h3>
                 <p>Advanced Editing (DaVinci Resolve, Clipchamp), Cinematography, Drone Ops</p>
-                                <div class="skill-bar"><div class="skill-bar-fill" style="--skill-width:88%"></div></div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="--skill-width: 90%"></div></div>
             </div>
             <div class="skill-card">
                 <i class="fa-solid fa-chart-line"></i>
                 <h3>Performance Marketing</h3>
                 <p>Lead Generation, SEO, Data-Driven Decisions, ROI Analysis</p>
-                                <div class="skill-bar"><div class="skill-bar-fill" style="--skill-width:85%"></div></div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="--skill-width: 85%"></div></div>
             </div>
             <div class="skill-card">
                 <i class="fa-solid fa-robot"></i>
                 <h3>Marketing Automation</h3>
                 <p>n8n, ChatGPT Workflows, Social Media Analytics</p>
-                                <div class="skill-bar"><div class="skill-bar-fill" style="--skill-width:80%"></div></div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="--skill-width: 80%"></div></div>
             </div>
         </div>
     </section>
@@ -133,106 +136,104 @@
         <span class="section-tag">Portfolio Achievements</span>
         <h2 class="section-title">Featured Brands</h2>
         <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image"><i class="fa-solid fa-car"></i></div>
+            <!-- BRAND: Laxmi Car Decor -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <i class="fa-solid fa-car"></i>
+                </div>
                 <div class="project-info">
                     <h3>Laxmi Car Decor</h3>
                     <p>Built presence from ground zero. Increased showroom walk-ins through product photography and installation videos.</p>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image"><i class="fa-solid fa-truck-pickup"></i></div>
+            
+            <!-- BRAND: SMT Automall -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
                 <div class="project-info">
                     <h3>SMT Automall</h3>
                     <p>Executed performance-driven Meta campaigns for car buyers in Sikar region. Generated qualified sales leads.</p>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image"><i class="fa-solid fa-notes-medical"></i></div>
+
+            <!-- BRAND: MediService -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <i class="fa-solid fa-hospital"></i>
+                </div>
                 <div class="project-info">
                     <h3>MediService</h3>
                     <p>Managed healthcare digital marketing and online presence (mediservices.in).</p>
                 </div>
             </div>
-        </div>
-        
+
             <!-- BRAND: MDCL School Chirawa -->
-            <div class="work-card">
-                <div class="work-img">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweruCh5vNsnWFE5BUTybVFXC38gzuMfJeCzBJnDxrmLBPvbC0OkCz0XUSBUUplxsxE56ovMQltlg4VXAsQac4CQVEcPKFo60NTZ6OGVQa6Zpmq0phmL--p-aPnli2hJ1u9hvTc7y=w800-h500-k-no" alt="MDCL School Chirawa" loading="lazy" onerror="this.style.display='none'">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <i class="fa-solid fa-school"></i>
                 </div>
-                <div class="work-info">
+                <div class="project-info">
                     <h3>MDCL School Chirawa</h3>
                     <p>Managed digital marketing and social media presence for MDCL School, Chirawa — building brand awareness across the region.</p>
                 </div>
             </div>
 
             <!-- BRAND: MediService Sikar -->
-            <div class="work-card">
-                <div class="work-img">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipNLCEMTE6IxKE_TPr1LLN9qdRpJnGRwMLrvM3Q1=w800-h500-k-no" alt="MediService Sikar" loading="lazy" onerror="this.style.display='none'">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <i class="fa-solid fa-stethoscope"></i>
                 </div>
-                <div class="work-info">
+                <div class="project-info">
                     <h3>MediService Sikar</h3>
-                    <p>Managed healthcare digital marketing and online presence for MediService — Sikar's trusted hospital supply department.</p>
+                    <p>Managed healthcare digital marketing and online presence for MediService - Sikar's trusted hospital supply department.</p>
                 </div>
             </div>
 
             <!-- BRAND: Jalan Computers -->
-            <div class="work-card">
-                <div class="work-img">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipOfTXYjfiYjJ2xVx_P8HVS5pvSeYIhA2hrQpfWO=w800-h500-k-no" alt="Jalan Computers" loading="lazy" onerror="this.style.display='none'">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <i class="fa-solid fa-laptop"></i>
                 </div>
-                <div class="work-info">
+                <div class="project-info">
                     <h3>Jalan Computers</h3>
                     <p>Executed digital campaigns for Jalan Computers, Sikar's leading computer store on Pahariya Tower, Railway Station Road.</p>
                 </div>
             </div>
 
             <!-- BRAND: Shri Krishnam Hotel -->
-            <div class="work-card">
-                <div class="work-img">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqMFBahwPs_LCTZWutaYN2MooUoiF4HUT8upO2yMzhGo5ftU0Ko2SpVeq8FmIWSpggq7rbn-b-AwOovm9C4PWuqv209FvGz1Uew9XA778B7tv_-foQ0NpVdG3T02deiIyYifsi9=w800-h500-k-no" alt="Shri Krishnam Hotel & Restaurant" loading="lazy" onerror="this.style.display='none'">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <i class="fa-solid fa-hotel"></i>
                 </div>
-                <div class="work-info">
+                <div class="project-info">
                     <h3>Shri Krishnam Hotel & Restaurant</h3>
-                    <p>Built online presence for Shri Krishnam Hotel & Restaurant, Dadiya — driving dine-in and delivery orders through targeted social campaigns.</p>
+                    <p>Built online presence for Shri Krishnam Hotel & Restaurant, Dadiya - driving dine-in and delivery orders through targeted social campaigns.</p>
                 </div>
             </div>
 
             <!-- BRAND: Path Career Institute -->
-            <div class="work-card">
-                <div class="work-img">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoEjWliMYfEzHXvvZE3da5PdKQFh73OSER_N8DpW2t1BRklg1zV0MaMBBCGB-FpDbH_20epdw1eu9pvArPARZ-prt0Q0Na058TtRl1b7UTLYX-V5moaL2Ld5_sSJgn63pXiVyjQmHDj1eYS=w800-h500-k-no" alt="Path Career Institute" loading="lazy" onerror="this.style.display='none'">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <i class="fa-solid fa-graduation-cap"></i>
                 </div>
-                <div class="work-info">
+                <div class="project-info">
                     <h3>Path Career Institute</h3>
-                    <p>IT Head & Digital Marketing Lead — generating 400-500 monthly NEET admission leads through Meta Ads, reels, and landing pages. Sikar, Rajasthan.</p>
+                    <p>IT Head & Digital Marketing Lead - generating 400-500 monthly NEET admission leads through Meta Ads, reels, and landing pages. Sikar, Rajasthan.</p>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section class="section contact" id="contact">
-        <div class="contact-grid">
-            <div class="contact-text">
-                <h2>Let's talk for Something special</h2>
-                <p>Based in Sikar, Rajasthan. Reach out to collaborate on high-impact digital storytelling and growth marketing.</p>
-                <div class="contact-btns">
-                    <a href="https://wa.me/917073123656" class="btn btn-whatsapp" target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <a href="mailto:hritiviz@gmail.com" class="btn btn-gmail">
-                        <i class="fa-regular fa-envelope"></i> Gmail
-                    </a>
-                    <a href="tel:+917073123656" class="btn btn-call">
-                        <i class="fa-solid fa-phone"></i> Call Me
-                    </a>
-                </div>
-            </div>
-            <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKbqKFUpIYUlNqqMqFFKWqKsIADD2UHCqKu2qzLeCkp2nRcg/viewform?embedded=true">Loading…</iframe>
-            </div>
+    <section class="section" id="contact">
+        <h2 class="section-title">Let's talk for Something special</h2>
+        <p>Based in Sikar, Rajasthan. Reach out to collaborate on high-impact digital storytelling and growth marketing.</p>
+        <div class="contact-links-large">
+            <a href="https://wa.me/917073123656" class="contact-item">WhatsApp</a>
+            <a href="mailto:hritiviz@gmail.com" class="contact-item">Gmail</a>
+            <a href="tel:+917073123656" class="contact-item">Call Me</a>
         </div>
     </section>
 
@@ -240,6 +241,13 @@
         <p>&copy; 2026 Ritik Sharma Portfolio. B.Pharma Graduate & Marketing Professional.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
 </body>
 </html>
