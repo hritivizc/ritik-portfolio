@@ -280,6 +280,59 @@ nav ul li a:hover {
   font-size: 16px;
 }
 
+/* ---------- CV BOX ---------- */
+.cv-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 24px 28px;
+  margin-top: 28px;
+  transition: var(--transition);
+}
+
+.cv-box:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.cv-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.cv-box p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: var(--secondary);
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.cv-download:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
 /* ---------- CONTACT ---------- */
 .contact-grid {
   display: grid;
@@ -314,6 +367,60 @@ nav ul li a:hover {
   transform: translateY(-5px);
 }
 
+/* ---------- CONTACT BUTTONS ---------- */
+.contact-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37,211,102,0.3);
+}
+
+.btn-gmail {
+  background: #EA4335;
+  color: #fff;
+}
+
+.btn-gmail:hover {
+  background: #d93025;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(234,67,53,0.3);
+}
+
+.btn-call {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.btn-call:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
 .form-container {
   background: var(--card-bg);
   padding: 50px;
@@ -338,19 +445,41 @@ footer {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px) {
-  .hero-content h1 { font-size: 56px; }
-  .hero-content h1 span { font-size: 42px; }
+  .hero-content h1 {
+    font-size: 56px;
+  }
+  .hero-content h1 span {
+    font-size: 42px;
+  }
 }
 
 @media (max-width: 768px) {
-  nav ul { display: none; }
+  nav ul {
+    display: none;
+  }
   .hero {
     flex-direction: column;
     text-align: center;
     padding-top: 120px;
   }
-  .hero-illustration { display: none; }
-  .hero-content h1 { font-size: 48px; }
-  .section { padding: 80px 5%; }
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-illustration {
+    display: none;
+  }
+  .hero-content h1 {
+    font-size: 48px;
+  }
+  .section {
+    padding: 80px 5%;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .cv-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-btns {
+    justify-content: center;
+  }
 }
