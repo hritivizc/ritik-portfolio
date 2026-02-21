@@ -1,476 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritik Sharma | Marketing Specialist & Digital Storyteller</title>
-    <meta name="description" content="Ritik Sharma - IT Head at Path Career Institute, Founder of Hritiviz Digital Agency. Performance-focused digital marketing for education, healthcare, and automotive brands.">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Ritik Sharma | Marketing Specialist & Digital Storyteller</title>
+ <meta name="description" content="Ritik Sharma - IT Head at Path Career Institute, Founder of Hritiviz Digital Agency. Performance-focused digital marketing for education, healthcare, and automotive brands.">
+ <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+ <!-- Page Loader -->
+ <div id="pageLoader">
+ <div class="loader-squiggles">
+ <svg class="loader-squiggle" viewBox="0 0 100 40"><path d="M0,20 Q25,0 50,20 T100,20"></path></svg>
+ <svg class="loader-squiggle" viewBox="0 0 100 40"><path d="M0,20 Q25,40 50,20 T100,20"></path></svg>
+ <svg class="loader-squiggle" viewBox="0 0 100 40"><path d="M0,10 Q50,30 100,10"></path></svg>
+ </div>
+ </div>
+ <!-- Custom cursor -->
+ <div id="cursor"></div>
+ <div id="cursorRing"></div>
+ <!-- MOBILE TOP BAR -->
+ <div class="mobile-topbar">
+ <span class="mobile-topbar-name">RS<span style="color:var(--accent);">.</span></span>
+ <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ <!-- SIDEBAR -->
+ <aside class="sidebar" id="sidebar">
+ <!-- Avatar initials -->
+ <div class="sidebar-avatar">RS</div>
+ <div class="sidebar-name">Ritik Sharma</div>
+ <div class="sidebar-handle">@hritiviz</div>
+ <div class="sidebar-title">Marketing Specialist & Storyteller</div>
+ <div class="sidebar-location">
+ <i class="fa-solid fa-location-dot"></i> Sikar, Rajasthan
+ </div>
+ <div class="sidebar-meta">6 Years Experience In:</div>
+ <div class="xp-badges">
+ <span class="xp-badge">Meta Ads</span>
+ <span class="xp-badge">Reels</span>
+ <span class="xp-badge">Cinematography</span>
+ <span class="xp-badge">Growth</span>
+ </div>
+ <div class="sidebar-divider"></div>
+ <a href="mailto:hritiviz@gmail.com" class="btn-cta" id="emailCta">
+ <i class="fa-solid fa-envelope"></i> Get in Touch
+ </a>
+ <nav class="sidebar-nav">
+ <ul>
+ <li><a href="#about" class="active"><i class="fa-regular fa-user"></i> About</a></li>
+ <li><a href="#work"><i class="fa-regular fa-folder-open"></i> My Work</a></li>
+ <li><a href="#skills"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+ <li><a href="#contact"><i class="fa-regular fa-paper-plane"></i> Contact</a></li>
+ </ul>
+ </nav>
+ <a href="./cv/ritik-sharma-cv.pdf" class="sidebar-cv" download>
+ <i class="fa-solid fa-arrow-down-to-line"></i> Download CV
+ </a>
+ </aside>
+ <!-- MAIN CONTENT -->
+ <main class="main">
+ <!-- HERO -->
+ <section class="hero" id="about">
+ <div class="scribble-wrap" id="scribbleWrap" style="opacity:0;">
+ <svg class="scribble-svg" viewBox="0 0 200 60"><path class="scribble-path" d="M10,40 Q30,10 60,35 T120,30 Q150,50 190,20"></path></svg>
+ <span class="scribble">Hi, I'm Ritik</span>
+ </div>
+ <h1 class="hero-headline" id="heroHeadline">
+ <span class="hero-line"><span class="hero-line-inner">I turn scroll-stops</span></span>
+ <span class="hero-line"><span class="hero-line-inner">into brand 
+ <span class="highlight-wrap">
+ <span class="highlight-pill" id="highlightPill">growth.</span>
+ <svg class="highlight-svg" viewBox="0 0 150 60"><path class="highlight-path" d="M5,30 Q5,5 75,5 T145,30 Q145,55 75,55 T5,30"></path></svg>
+ </span>
+ </span></span>
+ </h1>
+ <div class="hero-chips">
+ <span class="chip">Social Media Marketing</span>
+ <span class="chip">Meta Ads</span>
+ <span class="chip">Video Editing</span>
+ <span class="chip">Cinematography</span>
+ <span class="chip">Web & Automation</span>
+ <span class="chip">Sikar, Rajasthan</span>
+ </div>
+ <div class="hero-annotation" id="workArrow">
+ <svg viewBox="0 0 60 60"><path d="M10,10 Q30,40 50,55"></path><path d="M40,55 L50,55 L50,45"></path></svg>
+ <span>Check this out!</span>
+ </div>
+ <div class="hero-btns">
+ <a href="#work" class="btn-primary"><i class="fa-solid fa-arrow-down"></i> See My Work</a>
+ <a href="./cv/ritik-sharma-cv.pdf" download class="btn-outline"><i class="fa-solid fa-download"></i> Download CV</a>
+ </div>
+ 
+ <!-- Animated Character Doodle -->
+ <div class="hero-doodle" data-aos="zoom-in" data-aos-delay="400">
+ <div class="doodle-head">
+ <div class="doodle-eyes">
+ <div class="eye"><div class="pupil"></div></div>
+ <div class="eye"><div class="pupil"></div></div>
+ </div>
+ <div class="doodle-smile"></div>
+ </div>
+ <div class="doodle-label">Okay so... how do i do that?</div>
+ <div class="doodle-arrow">
+ <svg viewBox="0 0 24 40"><path d="M12,2 L12,38 M4,30 L12,38 L20,30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+ </div>
+ </div>
 
-    <!-- Page Loader -->
-    <div id="pageLoader">
-        <div class="loader-squiggles">
-            <svg class="loader-squiggle" viewBox="0 0 100 40"><path d="M0,20 Q25,0 50,20 T100,20"></path></svg>
-            <svg class="loader-squiggle" viewBox="0 0 100 40"><path d="M0,20 Q25,40 50,20 T100,20"></path></svg>
-            <svg class="loader-squiggle" viewBox="0 0 100 40"><path d="M0,10 Q50,30 100,10"></path></svg>
-        </div>
-    </div>
+ <div class="scroll-indicator">Scroll to explore</div>
+ <!-- Floating aside card -->
+ <div class="hero-aside">
+ <strong>Currently</strong>
+ IT Head & DM Lead at Path Career Institute. Founder of Hritiviz Digital Agency.
+ </div>
+ </section>
+ <!-- STATS STRIP -->
+ <section class="stats-strip">
+ <div class="stat-item" data-aos="fade-up">
+ <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
+ <p>Years in Digital Marketing</p>
+ </div>
+ <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
+ <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
+ <p>Accounts Managed Simultaneously</p>
+ </div>
+ <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
+ <span class="stat-num" data-target="500">0</span><span class="stat-plus">+</span>
+ <p>Videos per Month Across Clients</p>
+ </div>
+ <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
+ <span class="stat-num" data-target="5000">0</span><span class="stat-plus">+</span>
+ <p>Leads/Month Peak Season</p>
+ </div>
+ </section>
+ <!-- ABOUT -->
+ <section class="section about" id="about-me-section">
+ <div class="section-tag" data-aos="fade-up">About Me</div>
+ <h2 class="section-title" data-aos="fade-up" data-aos-delay="60">The person behind the strategy</h2>
+ <div class="about-grid">
+ <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+ <p>I'm <strong>Ritik Sharma</strong>, a digital marketer and media specialist with <strong>6 years of hands-on experience</strong> building brands from the ground up. Based in Sikar, Rajasthan, I currently serve as <strong>IT Head & Digital Marketing Lead at Path Career Institute</strong> and run my own consultancy, <strong>Hritiviz Digital Agency</strong>.</p>
+ <p>I manage <strong>45 brand accounts simultaneously</strong>, running high-converting Meta Ad campaigns that consistently pull a <strong>30% interested audience rate</strong>. From scripting and cinematography to ad optimisation and automation, I handle the full digital lifecycle.</p>
+ <div class="role-badges">
+ <div class="role-badge">
+ <i class="fa-solid fa-building"></i>
+ <div><strong>IT Head & DM Lead</strong><span>Path Career Institute</span></div>
+ </div>
+ <div class="role-badge">
+ <i class="fa-solid fa-rocket"></i>
+ <div><strong>Founder & Lead Strategist</strong><span>Hritiviz Digital Agency</span></div>
+ </div>
+ </div>
+ </div>
+ <div class="timeline" data-aos="fade-left" data-aos-delay="160">
+ <h3 class="timeline-title">Experience Timeline</h3>
+ <div class="timeline-items">
+ <div class="tl-item">
+ <div class="tl-dot"></div>
+ <div class="tl-content"><strong>Path Career Institute</strong><span>IT Head & Digital Marketing Lead</span></div>
+ </div>
+ <div class="tl-item">
+ <div class="tl-dot"></div>
+ <div class="tl-content"><strong>Hritiviz Digital Agency</strong><span>Founder & Lead Strategist</span></div>
+ </div>
+ <div class="tl-item">
+ <div class="tl-dot"></div>
+ <div class="tl-content"><strong>Arogyam Prakritik Yog Kendra</strong><span>Digital Marketing Head</span></div>
+ </div>
+ <div class="tl-item">
+ <div class="tl-dot"></div>
+ <div class="tl-content"><strong>MDCL Group of Institutes</strong><span>Social Media & Campaign Manager</span></div>
+ </div>
+ <div class="tl-item">
+ <div class="tl-dot"></div>
+ <div class="tl-content"><strong>Laxmi Car Decor</strong><span>Full-Stack Digital Marketing</span></div>
+ </div>
+ <div class="tl-item">
+ <div class="tl-dot"></div>
+ <div class="tl-content"><strong>SMT Automall & Others</strong><span>Deepak Mobile, MediService, Jalan Computers</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- WORK ALTERNATING ROWS -->
+ <section class="work" id="work">
+ <div style="padding: 80px 80px 0; background: var(--bg);">
+ <div class="section-tag" data-aos="fade-up">Portfolio</div>
+ <h2 class="section-title" data-aos="fade-up" data-aos-delay="60">Results I've delivered</h2>
+ </div>
+ <!-- Row 1: Arogyam -->
+ <div class="work-row" data-aos="fade-up">
+ <div class="work-copy">
+ <div class="work-year">Healthcare & Wellness</div>
+ <h3 class="work-headline">I grew a yoga brand from 300 followers to a thriving online community.</h3>
+ <p class="work-desc">Built Arogyam's complete digital presence from scratch: cinematic yoga reels, patient testimonials, wellness tip carousels, and lead-gen campaigns for their offline programs.</p>
+ <div class="work-tags">
+ <span class="work-tag">Instagram Growth</span>
+ <span class="work-tag">Reels Production</span>
+ <span class="work-tag">Lead Generation</span>
+ </div>
+ <a href="https://www.instagram.com/arogyamyogasikar" class="btn-work" target="_blank" rel="noopener">
+ <i class="fa-brands fa-instagram"></i> View on Instagram
+ </a>
+ </div>
+ <div class="work-visual" style="background: linear-gradient(135deg, #0f7e6b, #14b8a6);">
+ <div class="work-visual-inner">
+ <div class="work-visual-icon"><i class="fa-solid fa-leaf"></i></div>
+ <div class="work-visual-label">Arogyam Yoga</div>
+ </div>
+ <div class="work-metrics">
+ <span class="work-metric"><i class="fa-solid fa-arrow-trend-up"></i> 300 → 10K+ followers</span>
+ <span class="work-metric"><i class="fa-solid fa-users"></i> Consistent leads</span>
+ </div>
+ </div>
+ </div>
+ <!-- Row 2: Path Career Institute (flipped) -->
+ <div class="work-row reverse" data-aos="fade-up">
+ <div class="work-copy">
+ <div class="work-year">Education & Meta Ads</div>
+ <h3 class="work-headline">I drive 400-500 admission leads every month for an education institute.</h3>
+ <p class="work-desc">Leading IT and digital marketing at Path Career Institute. High-converting Meta Ad campaigns targeting students during peak admission seasons with a 30% interested audience rate.</p>
+ <div class="work-tags">
+ <span class="work-tag">Meta Ads</span>
+ <span class="work-tag">Lead Generation</span>
+ <span class="work-tag">Content Strategy</span>
+ </div>
+ <a href="https://www.instagram.com/pathinstitute.sikar" class="btn-work" target="_blank" rel="noopener">
+ <i class="fa-brands fa-instagram"></i> Instagram
+ </a>
+ &nbsp;&nbsp;
+ <a href="https://www.pathcareerinstitute.com" class="btn-work" target="_blank" rel="noopener">
+ <i class="fa-solid fa-globe"></i> Website
+ </a>
+ </div>
+ <div class="work-visual" style="background: linear-gradient(135deg, #1a4480, #2563eb);">
+ <div class="work-visual-inner">
+ <div class="work-visual-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+ <div class="work-visual-label">Path Career Institute</div>
+ </div>
+ <div class="work-metrics">
+ <span class="work-metric"><i class="fa-solid fa-bullseye"></i> 400-500 leads/month</span>
+ <span class="work-metric"><i class="fa-solid fa-percent"></i> 30% audience rate</span>
+ </div>
+ </div>
+ </div>
+ <!-- Row 3: Laxmi Car Decor -->
+ <div class="work-row" data-aos="fade-up">
+ <div class="work-copy">
+ <div class="work-year">Automotive Accessories</div>
+ <h3 class="work-headline">I built a car accessories brand from 1 follower to an active local community.</h3>
+ <p class="work-desc">Produced high-engagement product showcase reels, before/after installation videos, and seasonal promotional campaigns that boosted walk-ins and online enquiries for Laxmi Car Decor.</p>
+ <div class="work-tags">
+ <span class="work-tag">Brand Building</span>
+ <span class="work-tag">Reels Production</span>
+ <span class="work-tag">Local Marketing</span>
+ </div>
+ <a href="https://www.instagram.com/laxmicardecor" class="btn-work" target="_blank" rel="noopener">
+ <i class="fa-brands fa-instagram"></i> View on Instagram
+ </a>
+ </div>
+ <div class="work-visual" style="background: linear-gradient(135deg, #7c2d12, #c2410c);">
+ <div class="work-visual-inner">
+ <div class="work-visual-icon"><i class="fa-solid fa-car"></i></div>
+ <div class="work-visual-label">Laxmi Car Decor</div>
+ </div>
+ <div class="work-metrics">
+ <span class="work-metric"><i class="fa-solid fa-arrow-trend-up"></i> 1 → 1000s of followers</span>
+ <span class="work-metric"><i class="fa-solid fa-store"></i> Walk-in growth</span>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- SKILLS -->
+ <section class="section skills" id="skills">
+ <div class="section-tag" data-aos="fade-up">My Toolkit</div>
+ <h2 class="section-title" data-aos="fade-up" data-aos-delay="60">Skills & Expertise</h2>
+ <div class="skills-cols">
+ <div class="skill-col" data-aos="fade-up" data-aos-delay="0">
+ <div class="skill-col-header">
+ <i class="fa-solid fa-chart-bar"></i>
+ <h3>Marketing</h3>
+ </div>
+ <div class="skill-tags">
+ <span class="skill-tag">Social Media Management</span>
+ <span class="skill-tag">Meta Ads (FB & IG)</span>
+ <span class="skill-tag">SEO & Organic Growth</span>
+ <span class="skill-tag">Lead Generation</span>
+ <span class="skill-tag">Performance Marketing</span>
+ <span class="skill-tag">Brand Strategy</span>
+ </div>
+ </div>
+ <div class="skill-col" data-aos="fade-up" data-aos-delay="100">
+ <div class="skill-col-header">
+ <i class="fa-solid fa-film"></i>
+ <h3>Content & Creative</h3>
+ </div>
+ <div class="skill-tags">
+ <span class="skill-tag">Video Editing (DaVinci)</span>
+ <span class="skill-tag">Graphic Design (Canva)</span>
+ <span class="skill-tag">Cinematography</span>
+ <span class="skill-tag">Drone Videography</span>
+ <span class="skill-tag">Content Scripting</span>
+ <span class="skill-tag">Reels & Short-form Video</span>
+ </div>
+ </div>
+ <div class="skill-col" data-aos="fade-up" data-aos-delay="200">
+ <div class="skill-col-header">
+ <i class="fa-solid fa-microchip"></i>
+ <h3>Tech & Automation</h3>
+ </div>
+ <div class="skill-tags">
+ <span class="skill-tag">WordPress / HTML/CSS</span>
+ <span class="skill-tag">AI Tools & n8n</span>
+ <span class="skill-tag">Analytics & Reporting</span>
+ <span class="skill-tag">CRM & Lead Tracking</span>
+ <span class="skill-tag">WhatsApp Automation</span>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- CONTACT -->
+ <section class="contact" id="contact">
+ <div class="section-tag" data-aos="fade-up">Get in Touch</div>
+ <h2 class="contact-headline" data-aos="fade-up" data-aos-delay="60" style="margin-bottom:0;">Let's create something<br> great together.</h2>
+ <div class="contact-layout" style="margin-top: 56px;">
+ <div data-aos="fade-right" data-aos-delay="100">
+ <p class="contact-subtext">Ready to grow your brand? Let's talk strategy, content, and results.</p>
+ <div class="contact-links-grid">
+ <a href="tel:+917073123656" class="contact-link">
+ <span class="cl-icon"><i class="fa-solid fa-phone"></i></span>
+ <div><small>Phone</small><strong>+91 7073123656</strong></div>
+ </a>
+ <a href="mailto:hritiviz@gmail.com" class="contact-link">
+ <span class="cl-icon"><i class="fa-solid fa-envelope"></i></span>
+ <div><small>Email</small><strong>hritiviz@gmail.com</strong></div>
+ </a>
+ <a href="https://www.linkedin.com/in/hritiviz-sharma-655376392" target="_blank" rel="noopener" class="contact-link">
+ <span class="cl-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+ <div><small>LinkedIn</small><strong>@hritiviz-sharma</strong></div>
+ </a>
+ <a href="https://www.instagram.com/arogyamyogasikar" target="_blank" rel="noopener" class="contact-link">
+ <span class="cl-icon"><i class="fa-brands fa-instagram"></i></span>
+ <div><small>Instagram (Arogyam)</small><strong>@arogyamyogasikar</strong></div>
+ </a>
+ </div>
+ </div>
+ <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="160" novalidate>
+ <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+ <div class="form-group">
+ <label for="name">Your Name</label>
+ <input type="text" id="name" name="name" placeholder="e.g. Priya Sharma" required>
+ </div>
+ <div class="form-group">
+ <label for="email">Email Address</label>
+ <input type="email" id="email" name="email" placeholder="you@example.com" required>
+ </div>
+ <div class="form-group">
+ <label for="message">Message</label>
+ <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or brand goals" required></textarea>
+ </div>
+ <button type="submit" class="btn-submit" id="submitBtn">Send Message</button>
+ </form>
+ </div>
+ </section>
+ <footer class="footer">
+ <p>© Ritik Sharma. Crafted with <i class="fa-solid fa-heart" style="color:var(--accent);"></i> in Sikar, Rajasthan.</p>
+ <div class="footer-socials">
+ <a href="https://www.linkedin.com/in/hritiviz-sharma-655376392"><i class="fa-brands fa-linkedin-in"></i></a>
+ <a href="https://www.instagram.com/arogyamyogasikar"><i class="fa-brands fa-instagram"></i></a>
+ <a href="mailto:hritiviz@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+ </div>
+ </footer>
+ </main>
 
-    <!-- Custom cursor -->
-    <div id="cursor"></div>
-    <div id="cursorRing"></div>
-
-    <!-- MOBILE TOP BAR -->
-    <div class="mobile-topbar">
-        <span class="mobile-topbar-name">RS<span style="color:var(--accent);">.</span></span>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar" id="sidebar">
-        <!-- Avatar initials -->
-        <div class="sidebar-avatar">RS</div>
-        
-        <div class="sidebar-name">Ritik Sharma</div>
-        <div class="sidebar-handle">@hritiviz</div>
-        <div class="sidebar-title">Marketing Specialist & Storyteller</div>
-        
-        <div class="sidebar-location">
-            <i class="fa-solid fa-location-dot"></i> Sikar, Rajasthan
-        </div>
-
-        <div class="sidebar-meta">6 Years Experience In:</div>
-        <div class="xp-badges">
-            <span class="xp-badge">Meta Ads</span>
-            <span class="xp-badge">Reels</span>
-            <span class="xp-badge">Cinematography</span>
-            <span class="xp-badge">Growth</span>
-        </div>
-
-        <div class="sidebar-divider"></div>
-
-        <a href="mailto:hritiviz@gmail.com" class="btn-cta" id="emailCta">
-            <i class="fa-solid fa-envelope"></i> Get in Touch
-        </a>
-
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="#about" class="active"><i class="fa-regular fa-user"></i> About</a></li>
-                <li><a href="#work"><i class="fa-regular fa-folder-open"></i> My Work</a></li>
-                <li><a href="#skills"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
-                <li><a href="#contact"><i class="fa-regular fa-paper-plane"></i> Contact</a></li>
-            </ul>
-        </nav>
-
-        <a href="./cv/ritik-sharma-cv.pdf" class="sidebar-cv" download>
-            <i class="fa-solid fa-arrow-down-to-line"></i> Download CV
-        </a>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="main">
-        
-        <!-- HERO -->
-        <section class="hero" id="about">
-            <div class="scribble-wrap" id="scribbleWrap" style="opacity:0;">
-                <svg class="scribble-svg" viewBox="0 0 200 60"><path class="scribble-path" d="M10,40 Q30,10 60,35 T120,30 Q150,50 190,20"></path></svg>
-                <span class="scribble">Hi, I'm Ritik</span>
-            </div>
-
-            <h1 class="hero-headline" id="heroHeadline">
-                <span class="hero-line"><span class="hero-line-inner">I turn scroll-stops</span></span>
-                <span class="hero-line"><span class="hero-line-inner">into brand 
-                    <span class="highlight-wrap">
-                        <span class="highlight-pill" id="highlightPill">growth.</span>
-                        <svg class="highlight-svg" viewBox="0 0 150 60"><path class="highlight-path" d="M5,30 Q5,5 75,5 T145,30 Q145,55 75,55 T5,30"></path></svg>
-                    </span>
-                </span></span>
-            </h1>
-
-            <div class="hero-chips">
-                <span class="chip">Social Media Marketing</span>
-                <span class="chip">Meta Ads</span>
-                <span class="chip">Video Editing</span>
-                <span class="chip">Cinematography</span>
-                <span class="chip">Web & Automation</span>
-                <span class="chip">Sikar, Rajasthan</span>
-            </div>
-
-            <div class="hero-annotation" id="workArrow">
-                <svg viewBox="0 0 60 60"><path d="M10,10 Q30,40 50,55"></path><path d="M40,55 L50,55 L50,45"></path></svg>
-                <span>Check this out!</span>
-            </div>
-
-            <div class="hero-btns">
-                <a href="#work" class="btn-primary"><i class="fa-solid fa-arrow-down"></i> See My Work</a>
-                <a href="./cv/ritik-sharma-cv.pdf" download class="btn-outline"><i class="fa-solid fa-download"></i> Download CV</a>
-            </div>
-
-            <div class="scroll-indicator">Scroll to explore</div>
-
-            <!-- Floating aside card -->
-            <div class="hero-aside">
-                <strong>Currently</strong>
-                IT Head & DM Lead at Path Career Institute. Founder of Hritiviz Digital Agency.
-            </div>
-        </section>
-
-        <!-- STATS STRIP -->
-        <section class="stats-strip">
-            <div class="stat-item" data-aos="fade-up">
-                <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
-                <p>Years in Digital Marketing</p>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
-                <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
-                <p>Accounts Managed Simultaneously</p>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
-                <span class="stat-num" data-target="500">0</span><span class="stat-plus">+</span>
-                <p>Videos per Month Across Clients</p>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
-                <span class="stat-num" data-target="5000">0</span><span class="stat-plus">+</span>
-                <p>Leads/Month Peak Season</p>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="section about">
-            <div class="section-tag" data-aos="fade-up">About Me</div>
-            <h2 class="section-title" data-aos="fade-up" data-aos-delay="60">The person behind the strategy</h2>
-            
-            <div class="about-grid">
-                <div class="about-text" data-aos="fade-right" data-aos-delay="100">
-                    <p>I'm <strong>Ritik Sharma</strong>, a digital marketer and media specialist with <strong>6 years of hands-on experience</strong> building brands from the ground up. Based in Sikar, Rajasthan, I currently serve as <strong>IT Head & Digital Marketing Lead at Path Career Institute</strong> and run my own consultancy, <strong>Hritiviz Digital Agency</strong>.</p>
-                    
-                    <p>I manage <strong>45 brand accounts simultaneously</strong>, running high-converting Meta Ad campaigns that consistently pull a <strong>30% interested audience rate</strong>. From scripting and cinematography to ad optimisation and automation, I handle the full digital lifecycle.</p>
-
-                    <div class="role-badges">
-                        <div class="role-badge">
-                            <i class="fa-solid fa-building"></i>
-                            <div><strong>IT Head & DM Lead</strong><span>Path Career Institute</span></div>
-                        </div>
-                        <div class="role-badge">
-                            <i class="fa-solid fa-rocket"></i>
-                            <div><strong>Founder & Lead Strategist</strong><span>Hritiviz Digital Agency</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline" data-aos="fade-left" data-aos-delay="160">
-                    <h3 class="timeline-title">Experience Timeline</h3>
-                    <div class="timeline-items">
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content"><strong>Path Career Institute</strong><span>IT Head & Digital Marketing Lead</span></div>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content"><strong>Hritiviz Digital Agency</strong><span>Founder & Lead Strategist</span></div>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content"><strong>Arogyam Prakritik Yog Kendra</strong><span>Digital Marketing Head</span></div>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content"><strong>MDCL Group of Institutes</strong><span>Social Media & Campaign Manager</span></div>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content"><strong>Laxmi Car Decor</strong><span>Full-Stack Digital Marketing</span></div>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content"><strong>SMT Automall & Others</strong><span>Deepak Mobile, MediService, Jalan Computers</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- WORK ALTERNATING ROWS -->
-        <section class="work" id="work">
-            <div style="padding: 80px 80px 0; background: var(--bg);">
-                <div class="section-tag" data-aos="fade-up">Portfolio</div>
-                <h2 class="section-title" data-aos="fade-up" data-aos-delay="60">Results I've delivered</h2>
-            </div>
-
-            <!-- Row 1: Arogyam -->
-            <div class="work-row" data-aos="fade-up">
-                <div class="work-copy">
-                    <div class="work-year">Healthcare & Wellness</div>
-                    <h3 class="work-headline">I grew a yoga brand from 300 followers to a thriving online community.</h3>
-                    <p class="work-desc">Built Arogyam's complete digital presence from scratch: cinematic yoga reels, patient testimonials, wellness tip carousels, and lead-gen campaigns for their offline programs.</p>
-                    <div class="work-tags">
-                        <span class="work-tag">Instagram Growth</span>
-                        <span class="work-tag">Reels Production</span>
-                        <span class="work-tag">Lead Generation</span>
-                    </div>
-                    <a href="https://www.instagram.com/arogyamyogasikar" class="btn-work" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-instagram"></i> View on Instagram
-                    </a>
-                </div>
-                <div class="work-visual" style="background: linear-gradient(135deg, #0f7e6b, #14b8a6);">
-                    <div class="work-visual-inner">
-                        <div class="work-visual-icon"><i class="fa-solid fa-leaf"></i></div>
-                        <div class="work-visual-label">Arogyam Yoga</div>
-                    </div>
-                    <div class="work-metrics">
-                        <span class="work-metric"><i class="fa-solid fa-arrow-trend-up"></i> 300 → 10K+ followers</span>
-                        <span class="work-metric"><i class="fa-solid fa-users"></i> Consistent leads</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Row 2: Path Career Institute (flipped) -->
-            <div class="work-row reverse" data-aos="fade-up">
-                <div class="work-copy">
-                    <div class="work-year">Education & Meta Ads</div>
-                    <h3 class="work-headline">I drive 400-500 admission leads every month for an education institute.</h3>
-                    <p class="work-desc">Leading IT and digital marketing at Path Career Institute. High-converting Meta Ad campaigns targeting students during peak admission seasons with a 30% interested audience rate.</p>
-                    <div class="work-tags">
-                        <span class="work-tag">Meta Ads</span>
-                        <span class="work-tag">Lead Generation</span>
-                        <span class="work-tag">Content Strategy</span>
-                    </div>
-                    <a href="https://www.instagram.com/pathinstitute.sikar" class="btn-work" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-instagram"></i> Instagram
-                    </a>
-                    &nbsp;&nbsp;
-                    <a href="https://www.pathcareerinstitute.com" class="btn-work" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-globe"></i> Website
-                    </a>
-                </div>
-                <div class="work-visual" style="background: linear-gradient(135deg, #1a4480, #2563eb);">
-                    <div class="work-visual-inner">
-                        <div class="work-visual-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <div class="work-visual-label">Path Career Institute</div>
-                    </div>
-                    <div class="work-metrics">
-                        <span class="work-metric"><i class="fa-solid fa-bullseye"></i> 400-500 leads/month</span>
-                        <span class="work-metric"><i class="fa-solid fa-percent"></i> 30% audience rate</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Row 3: Laxmi Car Decor -->
-            <div class="work-row" data-aos="fade-up">
-                <div class="work-copy">
-                    <div class="work-year">Automotive Accessories</div>
-                    <h3 class="work-headline">I built a car accessories brand from 1 follower to an active local community.</h3>
-                    <p class="work-desc">Produced high-engagement product showcase reels, before/after installation videos, and seasonal promotional campaigns that boosted walk-ins and online enquiries for Laxmi Car Decor.</p>
-                    <div class="work-tags">
-                        <span class="work-tag">Brand Building</span>
-                        <span class="work-tag">Reels Production</span>
-                        <span class="work-tag">Local Marketing</span>
-                    </div>
-                    <a href="https://www.instagram.com/laxmicardecor" class="btn-work" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-instagram"></i> View on Instagram
-                    </a>
-                </div>
-                <div class="work-visual" style="background: linear-gradient(135deg, #7c2d12, #c2410c);">
-                    <div class="work-visual-inner">
-                        <div class="work-visual-icon"><i class="fa-solid fa-car"></i></div>
-                        <div class="work-visual-label">Laxmi Car Decor</div>
-                    </div>
-                    <div class="work-metrics">
-                        <span class="work-metric"><i class="fa-solid fa-arrow-trend-up"></i> 1 → 1000s of followers</span>
-                        <span class="work-metric"><i class="fa-solid fa-store"></i> Walk-in growth</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Row 4: MDCL Group (flipped) -->
-            <div class="work-row reverse" data-aos="fade-up">
-                <div class="work-copy">
-                    <div class="work-year">Education Branding</div>
-                    <h3 class="work-headline">I managed social media & campaigns for a multi-campus education group.</h3>
-                    <p class="work-desc">Student stories, faculty spotlights, event coverage reels, and Meta campaigns driving enrollment enquiries for MDCL Group of Institutes.</p>
-                    <div class="work-tags">
-                        <span class="work-tag">Social Media</span>
-                        <span class="work-tag">Meta Campaigns</span>
-                        <span class="work-tag">Video Content</span>
-                    </div>
-                    <a href="https://mdcl.in" class="btn-work" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-globe"></i> mdcl.in
-                    </a>
-                    &nbsp;&nbsp;
-                    <a href="https://mdschoolcrw.com" class="btn-work" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-school"></i> School Site
-                    </a>
-                </div>
-                <div class="work-visual" style="background: linear-gradient(135deg, #3b1f6b, #7c3aed);">
-                    <div class="work-visual-inner">
-                        <div class="work-visual-icon"><i class="fa-solid fa-building-columns"></i></div>
-                        <div class="work-visual-label">MDCL Group</div>
-                    </div>
-                    <div class="work-metrics">
-                        <span class="work-metric"><i class="fa-solid fa-video"></i> Regular reel production</span>
-                        <span class="work-metric"><i class="fa-solid fa-chart-line"></i> Enrollment leads</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Row 5: SMT Automall -->
-            <div class="work-row" data-aos="fade-up">
-                <div class="work-copy">
-                    <div class="work-year">Automotive Dealership</div>
-                    <h3 class="work-headline">I created showroom content that brought customers through the door.</h3>
-                    <p class="work-desc">Showroom walk-through videos, new arrival reveals, and festive offer campaigns for SMT Automall converting digital viewers into physical showroom visitors.</p>
-                    <div class="work-tags">
-                        <span class="work-tag">Cinematography</span>
-                        <span class="work-tag">Video Production</span>
-                        <span class="work-tag">Campaign Management</span>
-                    </div>
-                    <a href="#contact" class="btn-work">
-                        <i class="fa-solid fa-arrow-right"></i> Work with me
-                    </a>
-                </div>
-                <div class="work-visual" style="background: linear-gradient(135deg, #1c3045, #334d66);">
-                    <div class="work-visual-inner">
-                        <div class="work-visual-icon"><i class="fa-solid fa-car-side"></i></div>
-                        <div class="work-visual-label">SMT Automall</div>
-                    </div>
-                    <div class="work-metrics">
-                        <span class="work-metric"><i class="fa-solid fa-image"></i> Photo & video content</span>
-                        <span class="work-metric"><i class="fa-solid fa-handshake"></i> Digital-to-showroom</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SKILLS -->
-        <section class="section skills" id="skills">
-            <div class="section-tag" data-aos="fade-up">My Toolkit</div>
-            <h2 class="section-title" data-aos="fade-up" data-aos-delay="60">Skills & Expertise</h2>
-            
-            <div class="skills-cols">
-                <div class="skill-col" data-aos="fade-up" data-aos-delay="0">
-                    <div class="skill-col-header">
-                        <i class="fa-solid fa-chart-bar"></i>
-                        <h3>Marketing</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Social Media Management</span>
-                        <span class="skill-tag">Meta Ads (FB & IG)</span>
-                        <span class="skill-tag">SEO & Organic Growth</span>
-                        <span class="skill-tag">Lead Generation</span>
-                        <span class="skill-tag">Performance Marketing</span>
-                        <span class="skill-tag">Brand Strategy</span>
-                    </div>
-                </div>
-
-                <div class="skill-col" data-aos="fade-up" data-aos-delay="100">
-                    <div class="skill-col-header">
-                        <i class="fa-solid fa-film"></i>
-                        <h3>Content & Creative</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Video Editing (DaVinci)</span>
-                        <span class="skill-tag">Graphic Design (Canva)</span>
-                        <span class="skill-tag">Cinematography</span>
-                        <span class="skill-tag">Drone Videography</span>
-                        <span class="skill-tag">Content Scripting</span>
-                        <span class="skill-tag">Reels & Short-form Video</span>
-                    </div>
-                </div>
-
-                <div class="skill-col" data-aos="fade-up" data-aos-delay="200">
-                    <div class="skill-col-header">
-                        <i class="fa-solid fa-microchip"></i>
-                        <h3>Tech & Automation</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">WordPress / HTML/CSS</span>
-                        <span class="skill-tag">AI Tools & n8n</span>
-                        <span class="skill-tag">Analytics & Reporting</span>
-                        <span class="skill-tag">CRM & Lead Tracking</span>
-                        <span class="skill-tag">Basic HTML / CSS</span>
-                        <span class="skill-tag">WhatsApp Automation</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="contact" id="contact">
-            <div class="section-tag" data-aos="fade-up">Get in Touch</div>
-            <h2 class="contact-headline" data-aos="fade-up" data-aos-delay="60" style="margin-bottom:0;">Let's create something<br> great together.</h2>
-            
-            <div class="contact-layout" style="margin-top: 56px;">
-                <!-- Info Links -->
-                <div data-aos="fade-right" data-aos-delay="100">
-                    <p class="contact-subtext">Ready to grow your brand? Let's talk strategy, content, and results.</p>
-                    
-                    <div class="contact-links-grid">
-                        <a href="tel:+917073123656" class="contact-link">
-                            <span class="cl-icon"><i class="fa-solid fa-phone"></i></span>
-                            <div><small>Phone</small><strong>+91 7073123656</strong></div>
-                        </a>
-                        <a href="mailto:hritiviz@gmail.com" class="contact-link">
-                            <span class="cl-icon"><i class="fa-solid fa-envelope"></i></span>
-                            <div><small>Email</small><strong>hritiviz@gmail.com</strong></div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/hritiviz-sharma-655376392" target="_blank" rel="noopener" class="contact-link">
-                            <span class="cl-icon"><i class="fa-brands fa-linkedin-in"></i></span>
-                            <div><small>LinkedIn</small><strong>@hritiviz-sharma</strong></div>
-                        </a>
-                        <a href="https://www.instagram.com/arogyamyogasikar" target="_blank" rel="noopener" class="contact-link">
-                            <span class="cl-icon"><i class="fa-brands fa-instagram"></i></span>
-                            <div><small>Instagram (Arogyam)</small><strong>@arogyamyogasikar</strong></div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Form -->
-                <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="160" novalidate>
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="e.g. Priya Sharma" required>
-                        <span class="field-error" id="nameError"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                        <span class="field-error" id="emailError"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or brand goals" required></textarea>
-                        <span class="field-error" id="messageError"></span>
-                    </div>
-                    <button type="submit" class="btn-submit" id="submitBtn">
-                        <i class="fa-solid fa-paper-plane"></i> Send Message
-                    </button>
-                    <p class="form-success" id="formSuccess">Thanks! I'll get back to you soon.</p>
-                </form>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="footer">
-            <p>&copy; <span id="footerYear"></span> Ritik Sharma. Crafted with <i class="fa-solid fa-heart" style="color:var(--accent); font-size:0.7rem; margin:0 2px;"></i> in Sikar, Rajasthan.</p>
-            <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/hritiviz-sharma-655376392" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/arogyamyogasikar" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="mailto:hritiviz@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-        </footer>
-
-    </main><!-- main -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="script.js"></script>
+ <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>
