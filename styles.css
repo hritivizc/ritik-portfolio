@@ -1291,3 +1291,96 @@ body:hover #cursorRing {
 }
 
 #scribbleWrap { opacity: 0; }
+
+/* HERO DOODLE CHARACTER */
+.hero-doodle {
+ position: absolute;
+ bottom: 120px;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 12px;
+ z-index: 10;
+ pointer-events: none;
+}
+.doodle-head {
+ width: 140px;
+ height: 140px;
+ background: #333;
+ border-radius: 50% 50% 45% 45%;
+ position: relative;
+ box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+ animation: doodle-float 4s ease-in-out infinite;
+}
+.doodle-eyes {
+ display: flex;
+ gap: 24px;
+ position: absolute;
+ top: 45px;
+ left: 50%;
+ transform: translateX(-50%);
+}
+.eye {
+ width: 22px;
+ height: 22px;
+ background: #fff;
+ border-radius: 50%;
+ position: relative;
+ overflow: hidden;
+}
+.pupil {
+ width: 10px;
+ height: 10px;
+ background: #000;
+ border-radius: 50%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ animation: pupil-move 5s infinite;
+}
+.doodle-smile {
+ width: 40px;
+ height: 20px;
+ border-bottom: 4px solid #fff;
+ border-radius: 0 0 40px 40px;
+ position: absolute;
+ bottom: 35px;
+ left: 50%;
+ transform: translateX(-50%);
+}
+.doodle-label {
+ font-family: var(--font-hand);
+ font-size: 1.2rem;
+ color: var(--text-muted);
+ background: var(--bg-card);
+ padding: 6px 16px;
+ border-radius: 12px;
+ border: 1px solid var(--border);
+ white-space: nowrap;
+ transform: rotate(-2deg);
+}
+.doodle-arrow {
+ color: var(--accent);
+ animation: arrow-bounce 2s infinite;
+}
+
+@keyframes doodle-float {
+ 0%, 100% { transform: translateY(0) rotate(0deg); }
+ 50% { transform: translateY(-15px) rotate(2deg); }
+}
+@keyframes pupil-move {
+ 0%, 100%, 80% { transform: translate(-50%, -50%); }
+ 20%, 40% { transform: translate(-20%, -30%); }
+ 50%, 70% { transform: translate(-80%, -20%); }
+}
+@keyframes arrow-bounce {
+ 0%, 100% { transform: translateY(0); opacity: 0.6; }
+ 50% { transform: translateY(10px); opacity: 1; }
+}
+
+@media (max-width: 900px) {
+ .hero-doodle { bottom: 60px; scale: 0.8; }
+}
